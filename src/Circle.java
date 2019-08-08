@@ -17,7 +17,12 @@ public class Circle extends GeometricShape {
     }
 
     @Override
+    public double calculateArea() {
+        return Math.PI * Math.pow(r, 2);
+    }
+
+    @Override
     public String toString() {
-        return "Okrąg o promieniu : " + r;
+        return "Okrąg o promieniu : " + r + super.toString();
     }
 }

@@ -1,19 +1,23 @@
 public class ShapeCalculatorTest {
     public static void main(String[] args) {
-        Line2d line = new Line2d(0,2,6,3);
-        Rectangle rectangle = new Rectangle(2,5);
-        Circle circle = new Circle(6);
-        Ball ball = new Ball(4);
-        Cube cube = new Cube(5);
+        Shape[] shapes = new Shape[5];
+        shapes[0] = new Line2d(0,2,6,3);
+        shapes[1] = new Rectangle(2,5);
+        shapes[2] = new Circle(6);
+        shapes[3] = new Ball(4);
+        shapes[4] = new Cube(5);
+
         ShapeCalculator calculator = new ShapeCalculator();
 
-        System.out.println(line.toString() + " ma długość : " + String.format("%.2f",calculator.lineLength(line)));
-        System.out.println(rectangle.toString() + " ma pole: " + String.format("%.2f",calculator.rectangleArea(rectangle)));
-        System.out.println(circle.toString() + " ma pole: " + String.format("%.2f",calculator.circleArea(circle)));
-        System.out.println(ball.toString() + " ma pojemność: " + String.format("%.2f",calculator.ballVolume(ball)));
-        System.out.println(cube.toString() + " ma pojemność: " + String.format("%.2f",calculator.cubeVolume(cube)));
+        for(Shape s : shapes){
+            if(s instanceof Line2d){
+                System.out.println(((Line2d)s).toString() + calculator.toString((Line2d) s));
+            } else if(s instanceof GeometricShape){
+                System.out.println(((GeometricShape)s).toString());
+            } else if(s instanceof Shape3d){
+                System.out.println(((Shape3d)s).toString());
+            }
 
-
-
+        }
     }
 }

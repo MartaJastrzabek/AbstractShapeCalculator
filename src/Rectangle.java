@@ -27,7 +27,12 @@ public class Rectangle extends GeometricShape {
     }
 
     @Override
+    public double calculateArea() {
+        return a * b;
+    }
+
+    @Override
     public String toString() {
-        return "Prostokąt o boku: " + a + " i: " + b;
+        return "Prostokąt o boku: " + a + " i: " + b + super.toString();
     }
 }

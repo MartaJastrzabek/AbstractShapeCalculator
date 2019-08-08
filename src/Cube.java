@@ -17,7 +17,12 @@ public class Cube extends Shape3d {
     }
 
     @Override
+    public double calcVolume() {
+        return Math.pow(a, 3);
+    }
+
+    @Override
     public String toString() {
-        return "Sześcian o boku a = " + a;
+        return "Sześcian o boku a = " + a + super.toString();
     }
 }

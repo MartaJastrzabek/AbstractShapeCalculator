@@ -48,10 +48,7 @@ public class Line2d extends Shape2d {
 
     @Override
     public String toString() {
-        return "Odcinek o współrzędnych:" +
-                "x1=" + x1 +
-                ", y1=" + y1 +
-                ", x2=" + x2 +
-                ", y2=" + y2;
+        return "Odcinek o współrzędnych: [" + x1 + " ," + y1 + "] ["
+                + x2 + ", " + y2 + "]" ;
     }
 }
